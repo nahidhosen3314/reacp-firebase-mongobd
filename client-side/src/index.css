@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  body{
+      @apply text-paragraph font-primary;
+  }
+  h1,h2,h3,h4,h5,h6{
+      @apply font-bold text-heading font-secondary;
+  }
+  h1{
+      @apply text-5xl;
+  }
+  h2{
+      @apply text-4xl;
+  }
+  h3{
+      @apply text-3xl;
+  }
+  h4{
+      @apply text-2xl;
+  }
+  h5{
+      @apply text-xl;
+  }
+  h6{
+      @apply text-lg;
+  }
+  p{
+      @apply text-base leading-6 text-paragraph ;
+  }
+  input, textarea {
+      @apply w-full text-base py-4 px-4 rounded-xl outline-none focus-visible:outline-none bg-white;
+  }
+  a{
+      @apply inline-block;
+  }
+  label{
+      @apply w-full;
+  }
+  li{
+      @apply text-sm leading-6 text-paragraph cursor-pointer;
+  }
+}
+
+@layer components{
+  button{
+      @apply px-4 py-2 hover:shadow-lg transition-all bg-primary text-white rounded-lg text-lg font-semibold inline-block;
+  }
+  .tw-btn{
+      @apply px-2  py-2 rounded-sm text-base inline-block;
+  }
+  .tw-btn-primary{
+      @apply text-white bg-primary hover:shadow-lg;
+  }
+  .tw-btn-secondary{
+      @apply text-white bg-secondary;
+  }
+}
+
+/* .menu li > *:not(ul, .menu-title, details, .btn).active{
+    @apply bg-primary text-white;
+} */
+
+.footer-sec li a{
+    @apply hover:text-primary inline-block mb-2 text-white/90 hover:underline;
+}
+.footer-sec p{
+    @apply text-white/90 text-base mb-3;
+}
+
+.slick-dots {
+    @apply !mb-14;
+}
+
+.slick-slider.slick-initialized {
+	overflow: hidden !important;
+}
+
+.menu a.active{
+    @apply !bg-primary !text-black;
+}
